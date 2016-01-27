@@ -1,0 +1,117 @@
+- var k = 0;
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave payments ', false, false, false, false, false, false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, false, true)
+
+				.page_title_block
+					h2.page_caption Refill balance
+					.feed_block
+						ul#payment_list.filter_list
+							li.filter_item: a.filter_link(href='#payment_tab_1') VISA / Mastercard
+							li.filter_item: a.filter_link(href='#payment_tab_2') Bonus code
+
+				div.main_content
+					.tabBlock(data-tab-context='#payment_list')
+						#payment_tab_1
+							.payment_form
+								form(action='#')
+									.content_block.clearfix
+										.payment_settings
+											.payment_form_caption: .middle_block.fw_b Credit card holder details
+											.f_row.mod_3
+												.fl.input_37: .middle_block Country: 
+												.fl.input_47.chosen_v1.white_mod.no_search.fw_600
+													- var n = 1
+													select.chosen-select(data-scrollbar="true")
+														while n < 25
+															option Poland #{n++}
+											.f_row.mod_3
+												.fl.input_37: .middle_block: label(for='card_holder_city') City:
+												.fl.input_47: input#card_holder_city.f_input.f_input_v3(placeholder='')
+											.f_row.mod_3
+												.fl.input_37: .middle_block: label(for='card_holder_email') E-mail:
+												.fl.input_47: input#card_holder_email.f_input.f_input_v3(placeholder='')
+
+											.f_row.mod_3
+												.fl.input_37: .middle_block: label(for='card_holder_first_name') First name:
+												.fl.input_47: input#card_holder_first_name.f_input.f_input_v3(placeholder='')
+											.f_row.mod_3
+												.fl.input_37: .middle_block: label(for='card_holder_last_name') Last name:
+												.fl.input_47: input#card_holder_last_name.f_input.f_input_v3(placeholder='')
+
+											.payment_btn_holder
+												button.btn_v9.payment_btn.icon-padlock
+													span.fz_18.middle_block.fw_600 Proceed with payment
+												
+										.payment_card_settings
+											.payment_form_caption
+												.middle_block.fw_b
+													.payment_switch_block.hoverHolder.dark_mod
+														.switch_btn.hoverControl
+															span Pay $20
+														.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+															ul.switch_list
+																while k < 10
+																	li.switch_item: a.switch_link(href='#') Pay $#{20 + k * 10}
+																	- k++;
+												.middle_block.fw_b
+													a.btn_v8.bonus_btn.icon-shuriken_fix(href='#')
+														span and get bonus 
+														span.fz_18  $20
+
+											.payment_card_block
+												.fl
+													.payment_card.payment_card_front
+														.f_row
+															.fl.input_37
+																label(for='card_holder_name') Holder name
+																.input_w
+																	input#card_holder_name.f_input.f_input_v2(placeholder='Your name')
+													
+															.fr.input_47
+																label(for='card_holder_surname') Surname
+																.input_w
+																	input#card_holder_surname.f_input.f_input_v2(placeholder='Your surname')
+
+														.f_row
+															label(for='card_number') Enter your credit card number
+															.input_w.input_60
+																input#card_number.f_input.f_input_v2(placeholder='0000 0000 0000 0000')
+																	
+														.f_row
+															label Expiration date
+															.card_exp_date
+																.fl.chosen_v1.no_search
+																	- n = 0
+																	select.chosen-select(data-scrollbar="true")
+																		while n < 12
+																			-n++;
+																			option= n
+																.fl.chosen_v1.no_search
+																	- n = 2015
+																	select.chosen-select(data-scrollbar="true")
+																		while n < 2025
+																			option= n++
+																	
+												.fr
+													.payment_card.payment_card_back
+														.fr
+															.cvv_block
+																label.fw_600(for='card_cvv') CVV2 / CVC2
+															.cvv_val
+																input#card_cvv.f_input.f_input_v2(placeholder='000')
+														.card_info Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+	
+						#payment_tab_2
+							| bonus tab
+							
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()

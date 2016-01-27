@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>ivave артист</title><!-- saved from url=(0014)about:internet -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles/main_global.css" media="all"/><!--[if lt IE 7]> <![endif]-->
+    <!--[if IE 7]> <![endif]-->
+    <!--[if IE 8]> <link rel="stylesheet" href="styles/main_ie.css" media="all"/> <![endif]-->
+    <!--[if gt IE 8]><!--> <link rel="stylesheet" href="styles/main_ie_9.css" media="all"/> <!--<![endif]-->
+    <script src="js/jquery1.10.js"></script>
+    <!--script(src='http://code.jquery.com/jquery.js')-->
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/jquery.scrollbar.js"></script>
+    <script src="js/isMobile.js"></script>
+    <script src="js/chosen.jquery.custom.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/ui_slider_pips.js"></script>
+    <script src="js/raphael.js"></script>
+    <script src="js/artist.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="base">
+        <div class="header">
+          <div class="nav_block clearfix">
+            <div class="logo_holder"><a href="#" class="logo"><img src="i/logo.png"/></a></div>
+            <ul class="user_menu">
+              <li class="user_m_item"><a href="#" class="menu_link sign_up_icon icon-lock"><span>Sign Up</span></a></li>
+              <li class="user_m_item"><a href="#" class="menu_link login_icon icon-login"><span>Login</span></a></li>
+            </ul>
+            <div class="header_menu_holder">
+              <ul class="main_menu">
+                <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Genres</span></a></li>
+                <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">World Charts</span></a></li>
+                <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Just Added</span></a></li>
+                <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Our Top</span></a></li>
+                <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Compilations</span></a></li>
+                <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Soundtracks</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="header_search_block autocomplete_v1">
+            <form action="#">
+              <div class="autocomplete_holder"></div>
+              <button class="search_btn icon-search_magnify"></button>
+              <div class="middle_block search_input_holder">
+                <input id="search_input" placeholder="Start type to search music" class="f_input search_input"/>
+              </div>
+              <div class="search_filter_block">
+                <div class="middle_block">
+                  <label class="check_emul check_emul_v1">
+                    <input type="radio" name="search_radio" checked="checked" class="hidden_check"/><span class="check_text">mp3</span>
+                  </label>
+                </div>
+                <div class="middle_block">
+                  <label class="check_emul check_emul_v1">
+                    <input type="radio" name="search_radio" class="hidden_check"/><span class="check_text">FLAC</span>
+                  </label>
+                </div>
+                <div class="middle_block">
+                  <label class="check_emul check_emul_v1">
+                    <input type="radio" name="search_radio" class="hidden_check"/><span class="check_text">Tags</span>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="page_title_block">
+          <div class="aside_spacer"></div>
+          <div class="filter_wrapper">
+            <div class="fl">
+              <div class="middle_block">
+                <h2 class="page_caption">Discography</h2>
+              </div>
+            </div>
+            <div class="fr title_filter">
+              <div class="middle_block">
+                <label class="check_emul check_emul_v3">
+                  <input type="radio" name="title_filter" class="hidden_check"><span class="check_text">All</span>
+                </label>
+              </div>
+              <div class="middle_block">
+                <label class="check_emul check_emul_v3">
+                  <input type="radio" name="title_filter" class="hidden_check"><span class="check_text">mp3</span>
+                </label>
+              </div>
+              <div class="middle_block">
+                <label class="check_emul check_emul_v3">
+                  <input type="radio" name="title_filter" class="hidden_check"><span class="check_text">FLAC</span>
+                </label>
+              </div>
+            </div>
+            <div class="filter_block">
+              <ul id="filter_list" class="filter_list">
+                <li class="filter_item"><a href="#filter_tab_1" class="filter_link">All</a></li>
+                <li class="filter_item"><a href="#filter_tab_2" class="filter_link">Albums</a></li>
+                <li class="filter_item"><a href="#filter_tab_3" class="filter_link">Singles</a></li>
+                <li class="filter_item"><a href="#filter_tab_4" class="filter_link">Compilations</a></li>
+                <li class="filter_item"><a href="#filter_tab_5" class="filter_link">Concerts</a></li>
+                <li class="filter_item"><a href="#filter_tab_6" class="filter_link">Bootlegs</a></li>
+                <li class="filter_item"><a href="#filter_tab_7" class="filter_link">Non Albums Tracks</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="main_content">
+          <div class="aside_left">
+            <div class="aside_left_inner artist_mod">
+              <div class="aside_info_box">
+                <div class="aside_caption_holder">
+                  <div class="fr"><a href="#" class="icon-heart favorite_author"></a></div>
+                  <div class="aside_caption fw_600 fz_20">Depeche Mode</div>
+                </div>
+              </div><a href="#" class="aside_album_cover"><img src="i/aside_album_1.jpg"></a>
+              <div class="aside_info_box">
+                <dl class="album_info_list">
+                  <dt>Released: </dt>
+                  <dd>2013 <br></dd>
+                  <dt>Size: </dt>
+                  <dd>128 Mb<br></dd>
+                  <dt>Bitrate: </dt>
+                  <dd>MP3 320 kbit<br></dd>
+                  <dt>Release ty</dt>
+                  <dd>pe: Concert<br></dd>
+                  <dt>Genres: </dt>
+                  <dd>Electronic, Pop/Rock<br></dd>
+                  <dt>Styles:</dt>
+                  <dd><a href="#" class="default_link">Adult Contemporary, </a><a href="#" class="default_link">AM Pop, </a><a href="#" class="default_link">Club/Dance, </a><a href="#" class="default_link">Contemporary Pop/Rock, </a><a href="#" class="default_link">Dance, </a><a href="#" class="default_link">Dance-Pop, </a><a href="#" class="default_link">Pop, </a><a href="#" class="default_link">Pop/Rock, </a><a href="#" class="default_link">Soft Rock </a></dd>
+                </dl>
+                <ul class="soc_share_list">
+                  <li class="soc_share_item"><a href="#" class="soc_share_link icon-soc_gl_2"></a></li>
+                  <li class="soc_share_item"><a href="#" class="soc_share_link icon-soc_tw_2"></a></li>
+                  <li class="soc_share_item"><a href="#" class="soc_share_link icon-soc_fb_3"></a></li>
+                  <li class="soc_share_item"><a href="#" class="soc_share_link icon-soc_vk_3"></a></li>
+                </ul>
+                <p>Originally an item of Britain's brand-new charming movement, Depeche Method went on to come to be the quintessential electro-pop band of the 1980s...</p><a href="#" class="btn_v6 biography_btn fw_600">Read full biography</a>
+              </div>
+              <div class="aside_info_box border_mod">
+                <div class="fz_17 fw_600">Best 10 tracks:</div>
+                <ul class="best_tracks_list playlist_btn_green player_btn_green">
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">Wrong</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">In Sympathy In Sympathy In Sympathy</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">Wrong</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">In Sympathy In Sympathy In Sympathy</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">Wrong</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">In Sympathy In Sympathy In Sympathy</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">Wrong</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">In Sympathy In Sympathy In Sympathy</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">Wrong</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                  <li class="best_tracks_item">
+                    <div class="fl">
+                      <div class="middle_block">
+                        <button class="player_btn icon-player_play"></button>
+                      </div>
+                      <div class="middle_block"><a href="#" class="default_link">In Sympathy In Sympathy In Sympathy</a></div>
+                    </div>
+                    <div class="fr">
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-heart active"></a></div>
+                      <div class="middle_block"><a href="#" class="playlist_btn icon-download_cloud"></a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="aside_info_box tags_mod">
+                <div class="fz_17 fw_600">Tags</div>
+                <div class="tags_block"><a href="#" class="default_link">pop </a><a href="#" class="default_link">multiple </a><a href="#" class="default_link">ipi </a><a href="#" class="default_link">chanteur </a><a href="#" class="default_link">americain </a><a href="#" class="default_link">pop </a><a href="#" class="default_link">and </a><a href="#" class="default_link">chart </a><a href="#" class="default_link">tell </a><a href="#" class="default_link">me </a><a href="#" class="default_link">greatest </a><a href="#" class="default_link">hits </a><a href="#" class="default_link">female </a><a href="#" class="default_link">vocalists </a><a href="#" class="default_link">dance </a><a href="#" class="default_link">80s </a><a href="#" class="default_link">electronic </a><a href="#" class="default_link">Madonna </a></div>
+              </div>
+            </div>
+          </div>
+          <div class="content_block artist_mod">
+            <div data-tab-context="#filter_list" class="tabBlock">
+              <div id="filter_tab_1">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_1" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="filter_tab_2">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_2" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="filter_tab_3">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_3" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="filter_tab_4">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_4" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="filter_tab_5">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_5" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="filter_tab_6">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_6" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="filter_tab_7">
+                <div class="content_box graph_holder">
+                  <div class="toddler_holder toddler_v1">
+                    <div id="line-graph_7" class="graph_block"></div>
+                    <div data-pips="true" class="toddler Toddler"></div>
+                  </div>
+                  <!--.graph_holder-->
+                </div>
+                <div class="content_box">
+                  <ul class="related_list">
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item cb_"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Frozen (In-Phase Bootled out)</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                    <li class="related_item"><a href="#" class="related_album_cover"><img src="i/aside_album_1.jpg"/>
+                        <div class="related_price"><span class="fz_17 fw_600">$ 1.20</span></div></a>
+                      <p><a href="#" class="default_link">Teenage Dream - The Complete Confection</a></p>
+                      <p><a href="#" class="default_link fw_600">Marianas Trench, 2013</a></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer_player_holder"><a href="#" class="footer_player_collapse_btn playerCollapseBtn"></a>
+          <div class="player_progress_track">
+            <div class="player_progress"></div>
+          </div><a href="#" class="player_artist player_compact"><img src="i/artist_1.jpg"/></a>
+          <div class="player_control_panel">
+            <div class="middle_block player_compact">
+              <div class="download_block">
+                <div class="download_share">-70%</div><a href="#" class="download_price icon-download">$ 1.30</a>
+              </div>
+            </div>
+            <div class="middle_block">
+              <div class="composition_author">
+                <p>Tommie Sunshine's Megasix Smash-Up</p>
+                <p><a href="#" class="icon-heart favorite_author"></a><a href="#" class="artist_name">Pink Floyd,</a><span class="middle_block">&nbsp; 1972</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="player_controls player_btn_blue">
+            <div class="middle_block player_compact">
+              <div class="player_track_time">01:23 / 4:21</div>
+            </div>
+            <div class="middle_block">
+              <button class="player_btn icon-player_prev player_btn_shadow"></button>
+            </div>
+            <div class="middle_block">
+              <button class="player_btn icon-player_play player_btn_shadow"></button>
+            </div>
+            <div class="middle_block">
+              <button class="player_btn icon-player_next player_btn_shadow"></button>
+            </div>
+            <div class="middle_block player_compact hoverHolder">
+              <div class="player_queue_block_corner hoverBlock"></div>
+              <div style_="display:block !important" class="player_queue_block hoverBlock">
+                <div class="player_q_title_holder">
+                  <div class="fl">
+                    <div class="middle_block">
+                      <div class="player_q_title">Player Queue</div>
+                    </div>
+                  </div>
+                  <div class="fr">
+                    <div class="middle_block"><a href="#" class="player_q_clear">Clear queue</a></div>
+                  </div>
+                </div>
+                <div data-max_screen_height="40%" data-scroller-class="scrollbar-inner scroller_holder h_380" class="scrollBar">
+                  <ul id="playerList" class="player_q_list shiftBlock playlist_btn_green">
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 1</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 2</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 3</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 4</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 5</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 6</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 7</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 8</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 9</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 10</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 11</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 12</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 13</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 14</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 15</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 16</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 17</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 18</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 19</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 20</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 21</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 22</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 23</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li data-drop-bitrate="310 kbit" data-drop-duration="2:33" class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"><img src="i/album_cover.jpg"/></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth 24</div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                    <li class="player_q_item shiftUnit playerDropUnit">
+                      <div class="fl">
+                        <div class="middle_block"><span class="check_emul check_emul_v2">
+                            <input type="checkbox" class="hidden_check shiftCheck"/><span class="check_text"></span></span></div>
+                        <div class="middle_block"><a href="#" class="player_q_cover"></a></div>
+                        <div class="middle_block">
+                          <div class="player_q_composition">Celebrate Youth LAST </div>
+                          <div class="player_q_artist">Rick Springfield</div>
+                        </div>
+                      </div>
+                      <div class="fr">
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-heart"></a></div>
+                        <div class="middle_block"><a href="#" class="playlist_btn icon-download"></a></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="playlist_controls">
+                  <div class="fl">
+                    <div class="middle_block"><a href="#" class="btn_v1 album_download_btn icon-download_btn">Download selected</a></div>
+                  </div>
+                  <div class="fl">
+                    <div class="middle_block">Total size: 29.15 Mb</div>
+                  </div>
+                </div>
+              </div>
+              <button class="player_btn player_list hoverControl icon-playlist"></button>
+            </div>
+            <div class="middle_block player_compact hoverHolder">
+              <div class="volume_block volumeControl">
+                <div class="volume_slider_track hoverBlock">
+                  <div class="volume_track_holder volumeSlider"></div>
+                </div>
+                <button class="player_btn icon-volume_medium hoverControl"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="nav_block clearfix">
+          <div class="copyright"><span class="middle_block">© 2015 Ivave</span></div>
+          <div class="footer_menu_holder">
+            <ul class="main_menu">
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Genres</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Charts</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">About us</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Contacts</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">FAQ</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Terms of Use</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Legal info</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Privacy policy</span></a></li>
+              <li class="menu_item"><a href="#" class="menu_link bg_color_white_mod"><span class="link_text">Refund Policy</span></a></li>
+            </ul>
+          </div>
+          <div class="dev_box"><span class="middle_block">Design by</span><a href="#" class="dev_link"><img src="i/dev_logo.png"/></a></div>
+        </div>
+      </div>
+    </div>
+    <div class="dev_pages">
+      <div><a href="index.html" class="default_link"></a></div>
+      <div><a href="index_login.html" class="default_link"></a></div>
+      <div><a href="faq.html" class="default_link"></a></div>
+      <div><a href="favorites.html" class="default_link"></a></div>
+      <div><a href="album.html" class="default_link"></a></div>
+      <div><a href="album_unreg.html" class="default_link"></a></div>
+      <div><a href="artist.html" class="default_link"></a></div>
+      <div><a href="collection.html" class="default_link"></a></div>
+      <div><a href="search_results.html" class="default_link"></a></div>
+      <div><a href="pl_management.html" class="default_link"></a></div>
+      <div><a href="account.html" class="default_link"></a></div>
+      <div><a href="just_added.html" class="default_link"></a></div>
+      <div><a href="history.html" class="default_link"></a></div>
+      <div><a href="support.html" class="default_link"></a></div>
+      <div><a href="support_ticket.html" class="default_link"></a></div>
+      <div><a href="charts.html" class="default_link"></a></div>
+      <div><a href="genres.html" class="default_link"></a></div>
+      <div><a href="our_top.html" class="default_link"></a></div>
+      <div><a href="payments.html" class="default_link"></a></div>
+      <div><a href="soundtracks.html" class="default_link"></a></div>
+      <div><a href="compilations.html" class="default_link"></a></div>
+      <div><a href="404.html" class="default_link"></a></div>
+    </div>
+    <!--+popups()-->
+    <!--+dev_btns()-->
+  </body>
+</html>

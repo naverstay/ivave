@@ -1,0 +1,23 @@
+.ie_gt8 .album_table .icon-player_play.player_btn::before {
+	font-size : .4em;
+}
+
+_:-ms-fullscreen, :root .album_table .icon-player_play.player_btn::before {
+	font-size : .4em;
+}
+
+.ie_gt8 .genre_icon {
+	top : 0;
+}
+
+_:-ms-fullscreen, :root .genre_icon {
+	top : 0;
+}
+
+.ie_gt8 .search_r_cover .player_btn.icon-player_play:before {
+	font-size : .41429em;
+}
+
+_:-ms-fullscreen, :root .search_r_cover .player_btn.icon-player_play:before {
+	font-size : .41429em;
+}

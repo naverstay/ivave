@@ -1,0 +1,41 @@
+include mixins
+include mixins_2
+doctype html
+html(lang='ru')
+	+dev_head('ivave just added', false, true, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true)
+				.page_title_block
+					h2.page_caption Just Added
+
+				div.main_content
+					.content_block
+						.content_box_caption.fz_16 07/04/2015
+						.content_box
+							ul.related_list.quart_mod
+								+loop_while(4)
+									li.related_item
+										a.related_album_cover(href='#')
+											img(src='i/aside_album_1.jpg')
+											.related_price: span.fz_17.fw_600 $ 1.20
+										p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+										p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+										
+						.content_box_caption.fz_16 06/04/2015
+						.content_box
+							ul.related_list.quart_mod
+								+loop_while(8)
+									li.related_item
+										a.related_album_cover(href='#')
+											img(src='i/aside_album_1.jpg')
+											.related_price: span.fz_17.fw_600 $ 1.20
+										p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+										p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+							
+
+			+page_footer()
+
+		+dev_pages()

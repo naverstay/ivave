@@ -1,0 +1,294 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave playlist management ', false, false, false, true, true)
+
+	body
+		.wrapper
+			#scrollUp.noDrag.drop_catcher.scroll_up
+			#scrollDown.noDrag.drop_catcher.scroll_down
+			.base
+				+page_header(true)
+
+				.page_title_block
+					h2.page_caption Playlist management
+
+				div.main_content
+					.content_block
+						a.fav_toggle_btn.management_mod.newPlaylistBtn(href='#', class='fav_toggle_add')
+
+						.albums_container
+							.album_head_wrapper
+								table.album_table
+									tr
+										th.col_pre_1 &nbsp;
+										th.col_1 #
+										th.col_2 &nbsp;
+										th.col_3 &nbsp;
+										th.col_4 Track name
+										th.col_5 Bitrate
+										th.col_6 Length
+										th.col_7 &nbsp;
+							
+							div.album_wrapper.newPlaylist(style='display:none')
+								table.album_table.fav_mod.shiftBlock(data-last-checked='-1')
+									tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+											a.btn_v7.table_collapse_btn.minus_mod.tableCollapseBtn(href='#' ,style='display:none')
+										td(colspan=7)
+											.fl: .middle_block
+												.fz_18
+													form.editable
+														input(type="text", width="225", height="22", autocomplete="off", name="value" placeholder='Unnamed yet...') 
+														button(type="submit") OK
+														button(type="cancel") Cancel
+							
+							form(action='#'): div.album_wrapper
+								table#playlist_3.album_table.fav_mod.sortBlock.shiftBlock(data-last-checked='-1')
+									tr.collapse_row_main.collapseRowMain.noDrag.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+											a.btn_v7.table_collapse_btn.minus_mod.tableCollapseBtn(href='#')
+										td(colspan=7)
+											.fl: .middle_block
+												.fz_18.one_line_mod
+													span.middle_block.editableBlock Mom's car 
+													span.middle_block  - 13 tracks, 65:23
+											.fr: .middle_block
+												a.management_btn.icon-delete(href='#'): span.fz_18.middle_block Delete
+												a.management_btn.icon-pencil.renameBtn(href='#'): span.fz_18.middle_block Rename
+												a.management_btn.icon-download(href='#'): span.fz_18.middle_block $ 1.30
+										
+									- var n = 0
+										while n < 12
+											- n++ ;
+											tr.collapseRowSlave.dragUnit.dropUnit.shiftUnit(data-collapse=1, data-drop-author='Springfield Rick' , data-drop-album='i/album_cover.jpg')
+												td.col_pre_1
+												td.col_1=n
+												td.col_2
+													span.check_emul.check_emul_v2
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text
+												td.col_3.player_btn_blue
+													a.player_btn.icon-player_play.player_btn_shadow(href='#')
+												td.col_4 Virgin Mary (Intro) #{n}
+												td.col_5 320 kbit
+												td.col_6.text_right 5:46
+												td.col_7.playlist_btn_green
+													a.playlist_btn.icon-heart(href='#')
+													a.icon-download.playlist_btn(href='#')
+													a.playlist_btn.icon-content_copy(href='#')
+													a.playlist_btn.icon-delete(href='#')
+	
+									tr.collapseRowSlave.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+										td(colspan=7): .album_list_controls.management_mod
+											.middle_block: .download_block
+												a.download_price.icon-download(href='#') Download selected
+											.middle_block
+												span.fz_18 Total price: $1.30   
+												span.download_size 148.00 Mb
+					
+							form(action='#'): div.album_wrapper
+								table#playlist_2.album_table.fav_mod.sortBlock.shiftBlock(data-last-checked='-1')
+									tr.collapse_row_main.collapseRowMain.noDrag.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+											a.btn_v7.table_collapse_btn.minus_mod.tableCollapseBtn(href='#')
+										td(colspan=7)
+											.fl: .middle_block
+												.fz_18.one_line_mod
+													span.middle_block.editableBlock Mom's car 
+													span.middle_block  - 13 tracks, 65:23
+											.fr: .middle_block
+												a.management_btn.icon-delete(href='#'): span.fz_18.middle_block Delete
+												a.management_btn.icon-pencil.renameBtn(href='#'): span.fz_18.middle_block Rename
+												a.management_btn.icon-download(href='#'): span.fz_18.middle_block $ 1.30
+										
+									- var n = 0
+										while n < 12
+											- n++ ;
+											tr.collapseRowSlave.dragUnit.dropUnit.shiftUnit(data-collapse=1, data-drop-author='Springfield Rick' , data-drop-album='i/album_cover.jpg')
+												td.col_pre_1
+												td.col_1=n
+												td.col_2
+													span.check_emul.check_emul_v2
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text
+												td.col_3.player_btn_blue
+													a.player_btn.icon-player_play.player_btn_shadow(href='#')
+												td.col_4 Virgin Mary (Intro) #{n}
+												td.col_5 320 kbit
+												td.col_6.text_right 5:46
+												td.col_7.playlist_btn_green
+													a.playlist_btn.icon-heart(href='#')
+													a.icon-download.playlist_btn(href='#')
+													a.playlist_btn.icon-content_copy(href='#')
+													a.playlist_btn.icon-delete(href='#')
+	
+									tr.collapseRowSlave.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+										td(colspan=7): .album_list_controls.management_mod
+											.middle_block: .download_block
+												a.download_price.icon-download(href='#') Download selected
+											.middle_block
+												span.fz_18 Total price: $1.30   
+												span.download_size 148.00 Mb
+					
+							form(action='#'): div.album_wrapper
+								table#playlist_1.album_table.fav_mod.sortBlock.shiftBlock(data-last-checked='-1')
+									tr.collapse_row_main.collapseRowMain.noDrag.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+											a.btn_v7.table_collapse_btn.minus_mod.tableCollapseBtn(href='#')
+										td(colspan=7)
+											.fl: .middle_block
+												.fz_18.one_line_mod
+													span.middle_block.editableBlock Mom's car 
+													span.middle_block  - 13 tracks, 65:23
+											.fr: .middle_block
+												a.management_btn.icon-delete(href='#'): span.fz_18.middle_block Delete
+												a.management_btn.icon-pencil.renameBtn(href='#'): span.fz_18.middle_block Rename
+												a.management_btn.icon-download(href='#'): span.fz_18.middle_block $ 1.30
+										
+									- var n = 0
+										while n < 12
+											- n++ ;
+											tr.collapseRowSlave.dragUnit.dropUnit.shiftUnit(data-collapse=1, data-drop-author='Springfield Rick' , data-drop-album='i/album_cover.jpg')
+												td.col_pre_1
+												td.col_1=n
+												td.col_2
+													span.check_emul.check_emul_v2
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text
+												td.col_3.player_btn_blue
+													a.player_btn.icon-player_play.player_btn_shadow(href='#')
+												td.col_4 Virgin Mary (Intro) #{n}
+												td.col_5 320 kbit
+												td.col_6.text_right 5:46
+												td.col_7.playlist_btn_green
+													a.playlist_btn.icon-heart(href='#')
+													a.icon-download.playlist_btn(href='#')
+													a.playlist_btn.icon-content_copy(href='#')
+													a.playlist_btn.icon-delete(href='#')
+	
+									tr.collapseRowSlave.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+										td(colspan=7): .album_list_controls.management_mod
+											.middle_block: .download_block
+												a.download_price.icon-download(href='#') Download selected
+											.middle_block
+												span.fz_18 Total price: $1.30   
+												span.download_size 148.00 Mb
+	
+						
+					
+							//div.album_wrapper
+								table.album_table.fav_mod.shiftBlock(data-last-checked='-1')
+									tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+											a.btn_v7.table_collapse_btn.minus_mod.tableCollapseBtn(href='#')
+										td(colspan=7)
+											.fl: .middle_block
+												.fz_18.one_line_mod
+													span.middle_block.editableBlock Mom's car
+													span.middle_block  - 13 tracks, 65:23
+											.fr: .middle_block
+												a.management_btn.icon-delete(href='#'): span.fz_18.middle_block Delete
+												a.management_btn.icon-pencil.renameBtn(href='#'): span.fz_18.middle_block Rename
+												a.management_btn.icon-download(href='#'): span.fz_18.middle_block $ 1.30
+										
+									+loop_while(10)
+										tr.collapseRowSlave.dragUnit.shiftUnit(data-collapse=1)
+											td.col_pre_1
+											td.col_1 1
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4 Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6.text_right 5:46
+											td.col_7.playlist_btn_green
+												a.playlist_btn.icon-heart(href='#')
+												a.icon-download.playlist_btn(href='#')
+												a.playlist_btn.icon-content_copy(href='#')
+												a.playlist_btn.icon-delete(href='#')
+	
+									tr.collapseRowSlave.dragUnit.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+										td(colspan=7): .album_list_controls.management_mod
+											.middle_block: .download_block
+												a.download_price.icon-download(href='#') Download selected
+											.middle_block
+												span.fz_18 Total price: $1.30  
+												span.download_size 148.00 Mb
+	
+							//div.album_wrapper
+								table.album_table.fav_mod.shiftBlock(data-last-checked='-1')
+									tr.collapse_row_main.collapseRowMain.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+											a.btn_v7.table_collapse_btn.minus_mod.tableCollapseBtn(href='#')
+										td(colspan=7)
+											.fl: .middle_block
+												.fz_18.one_line_mod
+													span.middle_block.editableBlock Mom's car
+													span.middle_block  - 13 tracks, 65:23
+											.fr: .middle_block
+												a.management_btn.icon-delete(href='#'): span.fz_18.middle_block Delete
+												a.management_btn.icon-pencil.renameBtn(href='#'): span.fz_18.middle_block Rename
+												a.management_btn.icon-download(href='#'): span.fz_18.middle_block $ 1.30
+										
+									+loop_while(10)
+										tr.collapseRowSlave.dragUnit.shiftUnit(data-collapse=1)
+											td.col_pre_1
+											td.col_1 1
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4 Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6.text_right 5:46
+											td.col_7.playlist_btn_green
+												a.playlist_btn.icon-heart(href='#')
+												a.icon-download.playlist_btn(href='#')
+												a.playlist_btn.icon-content_copy(href='#')
+												a.playlist_btn.icon-delete(href='#')
+	
+									tr.collapseRowSlave.dragUnit.shiftUnit(data-collapse=1)
+										td.col_pre_1
+											// to prevent shift checking bug
+											input.hidden_check.shiftCheck.hide(type='checkbox')
+										td(colspan=7): .album_list_controls.management_mod
+											.middle_block: .download_block
+												a.download_price.icon-download(href='#') Download selected
+											.middle_block
+												span.fz_18 Total price: $1.30  
+												span.download_size 148.00 Mb
+
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()

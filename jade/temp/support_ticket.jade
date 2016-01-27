@@ -1,0 +1,24 @@
+include mixins
+include mixins_3
+doctype html
+html(lang='ru')
+	+dev_head('ivave support ticket')
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, true)
+				.page_title_block
+					h2.page_caption Ticket #543 - closed
+
+				div.main_content
+
+					.content_block
+						.support_ticket
+							
+
+			+page_footer()
+		+dev_btns_unreg()
+		+unreg_popups()
+		+popups()
+		+dev_pages()

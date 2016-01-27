@@ -1,0 +1,26 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave результаты поиска', false, true)
+
+	body.search_results_mod
+		.wrapper
+			.base
+				+page_header(true, true)
+
+				div.main_content: .tabBlock(data-tab-context='#search_result_tabs')
+					#search_result_1
+						+search_result()
+					#search_result_2
+						+search_result(2)
+					#search_result_3
+						+search_result(3)
+					#search_result_4
+						+search_result(4)
+					#search_result_5
+						+search_result(5)
+					#search_result_6
+						+search_result(6)
+
+			+page_footer()
+		+dev_pages()

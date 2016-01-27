@@ -1,0 +1,287 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave альбом для незарегистрированных')
+
+	body.floating_search
+		.wrapper
+			//.rect_1024
+			.base
+				+page_header(false)
+				+floating_search()
+				.page_title_block
+					.fl: .middle_block: h2.page_caption Tracklist
+					.fr.title_filter
+						.middle_block
+							label.check_emul.check_emul_v3
+								input.hidden_check(type='radio', name='title_filter')
+								span.check_text mp3
+						.middle_block
+							label.check_emul.check_emul_v3
+								input.hidden_check(type='radio', name='title_filter')
+								span.check_text FLAC
+
+				div.main_content
+					.aside_left
+						a.aside_unreg_banner(href='#')
+							.aside_unreg_b_text Скидка 70%<br>для тех кто<br>зарегался<br>сегодня
+							img(src='i/banner_1.jpg')
+						.aside_left_inner
+							.aside_info_box
+								.aside_caption_holder
+									.fr: a.icon-heart.favorite_author(href='#')
+									.aside_caption.fw_600 MDNA World Tour
+								p
+									| by 
+									a.default_link.fw_600(href='#') Madonna
+							a.aside_album_cover(href='#'): img(src='i/aside_album_1.jpg')
+							.aside_info_box
+								dl.album_info_list
+									dt Released: 
+									dd 2013 <br>
+									dt Size: 
+									dd 128 Mb<br>
+									dt Bitrate: 
+									dd MP3 320 kbit<br>
+									dt Release ty
+									dd pe: Concert<br>
+									dt Genres: 
+									dd Electronic, Pop/Rock<br>
+									dt Styles:
+									dd
+										a.default_link(href='#') Adult Contemporary, 
+										a.default_link(href='#') AM Pop, 
+										a.default_link(href='#') Club/Dance, 
+										a.default_link(href='#') Contemporary Pop/Rock, 
+										a.default_link(href='#') Dance, 
+										a.default_link(href='#') Dance-Pop, 
+										a.default_link(href='#') Pop, 
+										a.default_link(href='#') Pop/Rock, 
+										a.default_link(href='#') Soft Rock 
+
+								ul.soc_share_list
+									li.soc_share_item: a.soc_share_link.icon-soc_gl_2(href='#')
+									li.soc_share_item: a.soc_share_link.icon-soc_tw_2(href='#')
+									li.soc_share_item: a.soc_share_link.icon-soc_fb_3(href='#')
+									li.soc_share_item: a.soc_share_link.icon-soc_vk_3(href='#')
+
+								.text_center
+									.album_control
+										.download_block
+											.download_share -70%
+											a.download_price.icon-download(href='#') $ 1.30
+										//a.btn_v1.album_download_btn.icon-download(href='#') $ 1.30
+
+							.aside_info_box.border_mod
+								.fz_17 More Madonna’s albums:
+							ul.aside_album_list
+								+loop_while(5)
+									li.aside_album_item: a.aside_album_link(href='#')
+										.aside_album_cover_small
+										.middle_block
+											p: span.default_link.fw_600(href='#') The best 00’s Hits
+											p 2014
+									li.aside_album_item: a.aside_album_link(href='#')
+										.aside_album_cover_small
+										.middle_block
+											p: span.default_link.fw_600(href='#') Frozen (In-Phase Bootlererereree Frozen (In-Phase Bootlererereree
+											p 2013
+
+							.more_albums_block
+								a.default_link(href='#') See all albums
+
+							.aside_info_box.tags_mod
+								.fz_17.fw_600 Tags
+								.tags_block
+									a.default_link(href='#') pop 
+									a.default_link(href='#') multiple 
+									a.default_link(href='#') ipi 
+									a.default_link(href='#') chanteur 
+									a.default_link(href='#') americain 
+									a.default_link(href='#') pop 
+									a.default_link(href='#') and 
+									a.default_link(href='#') chart 
+									a.default_link(href='#') tell 
+									a.default_link(href='#') me 
+									a.default_link(href='#') greatest 
+									a.default_link(href='#') hits 
+									a.default_link(href='#') female 
+									a.default_link(href='#') vocalists 
+									a.default_link(href='#') dance 
+									a.default_link(href='#') 80s 
+									a.default_link(href='#') electronic 
+									a.default_link(href='#') Madonna 
+
+					.content_block
+						.albums_container
+							.album_head_wrapper
+								table.album_table
+									tr
+										th.col_1 #
+										th.col_2 &nbsp;
+										th.col_3 &nbsp;
+										th.col_4 Track name
+										th.col_5 Bitrate
+										th.col_6 Length
+										th.col_7 &nbsp;
+
+							div.album_wrapper
+								table.album_table.shiftBlock(data-last-checked='-1')
+									tr
+										td.col_1 &nbsp;
+										td.col_2
+											span.check_emul.check_emul_v2
+												input.hidden_check.globalCheck(type='checkbox')
+												span.check_text
+										td.album_title(colspan=5)
+											.middle_block.fz_18 CD 1. MDNA World Tour
+											.middle_block
+												a.default_link.icon-download.album_download_link.fz_18.strike(href='#') $ 1.30
+											.middle_block
+												a.btn_v2.urge_btn.icon-trophy_award(href='#') Only 0.30c today, register and use
+									+loop_while(16)
+										tr.shiftUnit
+											td.col_1 1
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4 Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6 5:46
+											td.col_7.playlist_btn_green
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+										tr.shiftUnit
+											td.col_1 10
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4 Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6 5:46
+											td.col_7.playlist_btn_green
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+									tr.shiftUnit
+										td.col_1 13
+										td.col_2
+											span.check_emul.check_emul_v2
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text
+										td.col_3.player_btn_blue
+											a.player_btn.icon-player_play.player_btn_shadow(href='#')
+										td.col_4 Virgin Mary (Intro)
+										td.col_5 320 kbit
+										td.col_6 5:46
+										td.col_7.playlist_btn_green
+											a.icon-database_add.playlist_btn.plBtn(href='#')
+											a.icon-heart.playlist_btn.favBtn.active(href='#')
+											a.icon-download.playlist_btn(href='#')
+
+							.album_wrapper
+								table.album_table.shiftBlock(data-last-checked='-1')
+									tr
+										td.col_1 &nbsp;
+										td.col_2
+											span.check_emul.check_emul_v2
+												input.hidden_check.globalCheck(type='checkbox')
+												span.check_text
+										td.album_title(colspan=5)
+											.middle_block.fz_18 CD 1. MDNA World Tour
+											.middle_block.fz_18
+												a.default_link.icon-download.album_download_link.strike(href='#') $ 1.30
+											.middle_block
+												a.btn_v2.urge_btn.icon-trophy_award(href='#') Only 0.30c today, register and use
+									+loop_while(2)
+										tr.shiftUnit
+											td.col_1 1
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4 Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6 5:46
+											td.col_7.playlist_btn_green
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+										tr.shiftUnit
+											td.col_1 10
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4 Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6 5:46
+											td.col_7.playlist_btn_green
+												a.icon-database_add.playlist_btn.plBtn(href='#')
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.icon-download.playlist_btn(href='#')
+									tr.shiftUnit
+										td.col_1 13
+										td.col_2
+											span.check_emul.check_emul_v2
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text
+										td.col_3.player_btn_blue
+											a.player_btn.icon-player_play.player_btn_shadow(href='#')
+										td.col_4 Virgin Mary (Intro)
+										td.col_5 320 kbit
+										td.col_6 5:46
+										td.col_7.playlist_btn_green
+											a.icon-database_add.playlist_btn.plBtn(href='#')
+											a.icon-heart.playlist_btn.favBtn.active(href='#')
+											a.icon-download.playlist_btn(href='#')
+
+							.album_list_controls
+								.middle_block: .download_block
+									.download_share -70%
+									a.download_price.icon-download(href='#') Download selected
+								.middle_block
+									span.fz_18 Total price: $1.30   
+									span.download_size 148.00 Mb
+
+							.content_box
+								.content_box_caption
+									.fz_23 Related albums:
+
+								ul.related_list
+									+loop_while(2)
+										li.related_item.cb
+											a.related_album_cover(href='#')
+												img(src='i/aside_album_1.jpg')
+												.related_price: span.fz_17.fw_600 $ 1.20
+											p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+											p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+										li.related_item
+											a.related_album_cover(href='#')
+												img(src='i/aside_album_1.jpg')
+												.related_price: span.fz_17.fw_600 $ 1.20
+											p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+											p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+										li.related_item
+											a.related_album_cover(href='#')
+												img(src='i/aside_album_1.jpg')
+												.related_price: span.fz_17.fw_600 $ 1.20
+											p: a.default_link(href='#') Teenage Dream - The Complete Confection
+											p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+									
+			+page_footer()
+		+dev_btns_unreg()
+		+unreg_popups()
+		+popups()
+		+dev_pages()

@@ -1,0 +1,35 @@
+include mixins
+include mixins_2
+doctype html
+html(lang='ru')
+	+dev_head('ivave history', false, true, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, false, true)
+				.page_title_block
+					h2.page_caption Purchase history
+					.feed_block
+						ul#history_list.filter_list
+							li.filter_item: a.filter_link(href='#history_tab_1') From new to old 
+							li.filter_item: a.filter_link(href='#history_tab_2') From old to new
+
+				div.main_content
+					.content_block: .tabBlock(data-tab-context='#history_list')
+						#history_tab_1
+							.content_box_caption.fz_16 2015, April
+							+history_list()
+							.content_box_caption.fz_16 2015, Marth
+							+history_list()
+						#history_tab_2
+							.content_box_caption.fz_16 2015, April
+							+history_list()
+							.content_box_caption.fz_16 2015, Marth
+							+history_list()
+
+			+page_footer()
+		+dev_btns_unreg()
+		+unreg_popups()
+		+popups()
+		+dev_pages()

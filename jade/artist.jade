@@ -1,0 +1,136 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave артист', true)
+	body
+		.wrapper
+			.base
+				+page_header(true)
+				.page_title_block
+					.aside_spacer
+					.filter_wrapper
+						.fl: .middle_block: h2.page_caption Discography
+						.fr.title_filter
+							.middle_block
+								label.check_emul.check_emul_v3
+									input.hidden_check(type='radio', name='title_filter')
+									span.check_text All
+							.middle_block
+								label.check_emul.check_emul_v3
+									input.hidden_check(type='radio', name='title_filter')
+									span.check_text mp3
+							.middle_block
+								label.check_emul.check_emul_v3
+									input.hidden_check(type='radio', name='title_filter')
+									span.check_text FLAC
+						.filter_block
+							ul#filter_list.filter_list
+								li.filter_item: a.filter_link(href='#filter_tab_1') All
+								li.filter_item: a.filter_link(href='#filter_tab_2') Albums
+								li.filter_item: a.filter_link(href='#filter_tab_3') Singles
+								li.filter_item: a.filter_link(href='#filter_tab_4') Compilations
+								li.filter_item: a.filter_link(href='#filter_tab_5') Concerts
+								li.filter_item: a.filter_link(href='#filter_tab_6') Bootlegs
+								li.filter_item: a.filter_link(href='#filter_tab_7') Non Albums Tracks
+				div.main_content
+					.aside_left: .aside_left_inner.artist_mod
+						.aside_info_box
+							.aside_caption_holder
+								.fr: a.icon-heart.favorite_author(href='#')
+								.aside_caption.fw_600.fz_20 Depeche Mode
+						a.aside_album_cover(href='#'): img(src='i/aside_album_1.jpg')
+						.aside_info_box
+							dl.album_info_list
+								dt Released: 
+								dd 2013 <br>
+								dt Size: 
+								dd 128 Mb<br>
+								dt Bitrate: 
+								dd MP3 320 kbit<br>
+								dt Release ty
+								dd pe: Concert<br>
+								dt Genres: 
+								dd Electronic, Pop/Rock<br>
+								dt Styles:
+								dd
+									a.default_link(href='#') Adult Contemporary, 
+									a.default_link(href='#') AM Pop, 
+									a.default_link(href='#') Club/Dance, 
+									a.default_link(href='#') Contemporary Pop/Rock, 
+									a.default_link(href='#') Dance, 
+									a.default_link(href='#') Dance-Pop, 
+									a.default_link(href='#') Pop, 
+									a.default_link(href='#') Pop/Rock, 
+									a.default_link(href='#') Soft Rock 
+							ul.soc_share_list
+								li.soc_share_item: a.soc_share_link.icon-soc_gl_2(href='#')
+								li.soc_share_item: a.soc_share_link.icon-soc_tw_2(href='#')
+								li.soc_share_item: a.soc_share_link.icon-soc_fb_3(href='#')
+								li.soc_share_item: a.soc_share_link.icon-soc_vk_3(href='#')
+							p Originally an item of Britain's brand-new charming movement, Depeche Method went on to come to be the quintessential electro-pop band of the 1980s...
+							a.btn_v6.biography_btn.fw_600(href='#') Read full biography
+						.aside_info_box.border_mod
+							.fz_17.fw_600 Best 10 tracks:
+							ul.best_tracks_list.playlist_btn_green.player_btn_green
+								+loop_while(5)
+									li.best_tracks_item
+										.fl
+											.middle_block: button.player_btn.icon-player_play
+											.middle_block: a.default_link(href='#') Wrong
+										.fr
+											.middle_block: a.playlist_btn.icon-heart.active(href='#')
+											.middle_block: a.playlist_btn.icon-download_cloud(href='#')
+									li.best_tracks_item
+										.fl
+											.middle_block: button.player_btn.icon-player_play
+											.middle_block: a.default_link(href='#') In Sympathy In Sympathy In Sympathy
+										.fr
+											.middle_block: a.playlist_btn.icon-heart.active(href='#')
+											.middle_block: a.playlist_btn.icon-download_cloud(href='#')
+						.aside_info_box.tags_mod
+							.fz_17.fw_600 Tags
+							.tags_block
+								a.default_link(href='#') pop 
+								a.default_link(href='#') multiple 
+								a.default_link(href='#') ipi 
+								a.default_link(href='#') chanteur 
+								a.default_link(href='#') americain 
+								a.default_link(href='#') pop 
+								a.default_link(href='#') and 
+								a.default_link(href='#') chart 
+								a.default_link(href='#') tell 
+								a.default_link(href='#') me 
+								a.default_link(href='#') greatest 
+								a.default_link(href='#') hits 
+								a.default_link(href='#') female 
+								a.default_link(href='#') vocalists 
+								a.default_link(href='#') dance 
+								a.default_link(href='#') 80s 
+								a.default_link(href='#') electronic 
+								a.default_link(href='#') Madonna 
+					.content_block.artist_mod: .tabBlock(data-tab-context='#filter_list')
+						#filter_tab_1
+							+discography_graph(1)
+							+discography()
+						#filter_tab_2
+							+discography_graph(2)
+							+discography()
+						#filter_tab_3
+							+discography_graph(3)
+							+discography()
+						#filter_tab_4
+							+discography_graph(4)
+							+discography()
+						#filter_tab_5
+							+discography_graph(5)
+							+discography()
+						#filter_tab_6
+							+discography_graph(6)
+							+discography()
+						#filter_tab_7
+							+discography_graph(7)
+							+discography()
+			+page_footer()
+		+dev_pages()
+		//+popups()
+		//+dev_btns()

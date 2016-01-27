@@ -1,0 +1,186 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave главная', false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true)
+				+main_slider()
+				+welcome_block()
+
+				div.main_content
+					.content_box
+						.content_box_title
+							.fl: .middle_block: h2.page_caption Best selers
+							.fr
+								.middle_block
+									a.default_link.icon-forward_all.see_all_link.fw_600(href='#') See all
+									
+						ul.bestseller_list
+							+loop_while(5)
+								li.bestseller_item
+									a.related_album_cover(href='#')
+										img(src='i/aside_album_1.jpg')
+										.related_price: span.fz_17.fw_600 $ 1.20
+									p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+									p
+										a.default_link.fw_600(href='#') Marianas Trench 
+										span.text_gray  2013
+
+					.content_box
+						.content_box_title
+							.fl: .middle_block: h2.page_caption Today’s top
+							.fr
+								.middle_block
+									a.default_link.icon-forward_all.see_all_link.fw_600(href='#') See all
+									
+						ul.days_top_list
+							+loop_while(8)
+								li.days_top_item
+									a.top_album_cover(href='#')
+										img(src='i/album_cover.jpg')
+									.fl: .middle_block
+										p.one_line_mod: a.default_link.fw_600(href='#') An Aresome Wave
+										p
+											a.default_link.fw_600(href='#') Ali-G  
+											span.text_gray  2013
+
+					.content_section
+						.block_caption_holder
+							.fl: h3.page_caption World charts
+							.fr.title_filter
+								.middle_block
+									label.check_emul.check_emul_v3
+										input.hidden_check(type='radio', name='title_filter')
+										span.check_text.fw_600 Songs
+								.middle_block
+									label.check_emul.check_emul_v3
+										input.hidden_check(type='radio', name='title_filter')
+										span.check_text.fw_600 Albums
+												
+						.column_wrapper.chart_mod.playlist_btn_green.player_btn_green
+							+loop_while(3)
+								.column_unit
+									.chart_switch_block.hoverHolder
+										.switch_btn.hoverControl
+											.switch_icon: img(src='i/flag_usa.png')
+											span USA Top 100 Albums
+										.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+											+switch_list()
+											
+									.search_result_block
+										ul.search_result_list
+											li.search_result_unit
+												.fl
+													a.search_r_cover(href='#')
+													.search_result_text 
+														p: a.default_link(href='#') Best Of Dubstep 2012
+														p
+															a.default_link(href='#') Ofra Haza,  
+															span.text_gray 2000
+												.fr
+													.text_center: a.playlist_btn.icon-heart.active(href='#')
+													.text_center: a.playlist_btn.icon-download_cloud(href='#')
+											li.search_result_unit
+												.fl
+													a.search_r_cover(href='#')
+													.search_result_text 
+														p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+														p
+															a.default_link(href='#') Various Artists, 
+															span.text_gray 2000
+												.fr
+													.text_center: a.playlist_btn.icon-heart.active(href='#')
+													.text_center: a.playlist_btn.icon-download_cloud(href='#')
+											li.search_result_unit
+												.fl
+													a.search_r_cover(href='#')
+													.search_result_text 
+														p: a.default_link(href='#') Best Of Dubstep 2012
+														p
+															a.default_link(href='#') Ofra Haza,  
+															span.text_gray 2000
+												.fr
+													.text_center: a.playlist_btn.icon-heart.active(href='#')
+													.text_center: a.playlist_btn.icon-download_cloud(href='#')
+											li.search_result_unit
+												.fl
+													a.search_r_cover(href='#')
+													.search_result_text 
+														p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+														p
+															a.default_link(href='#') Various Artists, 
+															span.text_gray 2000
+												.fr
+													.text_center: a.playlist_btn.icon-heart.active(href='#')
+													.text_center: a.playlist_btn.icon-download_cloud(href='#')
+	
+						a.btn_v1.load_more_btn(href='#') Load more items
+						
+					.content_section
+						.content_box
+							.content_box_title
+								.fl
+									.middle_block
+										h2.page_caption Just added
+									.middle_block
+										a.icon-feed_rss.rss_link.fz_16(href='#') RSS
+								.fr: .middle_block
+										a.default_link.icon-forward_all.see_all_link.fw_600(href='#') See all
+	
+							ul.days_top_list
+								+loop_while(12)
+									li.days_top_item
+										a.top_album_cover(href='#')
+											img(src='i/album_cover.jpg')
+										.fl: .middle_block
+											p.one_line_mod: a.default_link.fw_600(href='#') An Aresome Wave
+											p
+												a.default_link.fw_600(href='#') Ali-G  
+												span.text_gray  2013
+
+					.wide_reg_banner
+						.table
+							.table_cell
+								.fl: .middle_block
+									.wide_b_title Register today
+									.wide_b_subtitle Don’t waste your time
+								.fr
+									.middle_block: .wide_b_info
+										p.text_right
+											| Register today and recieve  
+											b $0.50  <br>
+											| to your acount  
+											b for free <br>
+											| to try our service!
+									.middle_block
+										a.btn_v5.newbe_btn(href='#') Register now!
+
+					.content_box
+						.content_box_title
+							h2.page_caption Top tags
+							.tags_block.large_mod
+								+loop_while(3)
+									a.default_link(href='#') pop 
+									a.default_link(href='#') multiple 
+									a.default_link(href='#') ipi 
+									a.default_link(href='#') chanteur 
+									a.default_link(href='#') americain 
+									a.default_link(href='#') pop 
+									a.default_link(href='#') and 
+									a.default_link(href='#') chart 
+									a.default_link(href='#') tell 
+									a.default_link(href='#') me 
+									a.default_link(href='#') greatest 
+									a.default_link(href='#') hits 
+									a.default_link(href='#') female 
+									a.default_link(href='#') vocalists 
+									a.default_link(href='#') dance 
+									a.default_link(href='#') 80s 
+									a.default_link(href='#') electronic 
+									a.default_link(href='#') Madonna 
+									
+			+page_footer()
+		+dev_pages()

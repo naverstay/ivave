@@ -1,0 +1,63 @@
+include mixins
+include mixins_2
+doctype html
+html(lang='ru')
+	+dev_head('ivave account')
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, true)
+				.page_title_block
+					h2.page_caption Account
+
+				div.main_content: .content_block
+					form(action='#')
+						.account_form
+							.f_row.mod_3
+								.fl.auth_label: .middle_block Email:
+								.fl.auth_input: .fw_600 nikohark@hotmail.com
+							.f_row.mod_3
+								.fl.auth_label: .middle_block Balance: 
+								.fl.auth_input: .fw_600 $14.90 (149 or 50 FLAC files)
+							.f_row.mod_3
+								.fl.auth_label: .middle_block Personal bonus:
+								.fl.auth_input: .fw_600 $14.90 (149 or 50 FLAC files)
+							.f_row.mod_3
+								.fl.auth_label: .middle_block: label() Birthday:
+								.fl.auth_input
+									.fl.chosen_v1.no_search
+										- var n = 1
+										select.chosen-select(data-scrollbar="true")
+											while n < 32
+												option= n++
+									.fl.chosen_v1.no_search
+										- n = 1
+										select.chosen-select(data-scrollbar="true")
+											while n < 12
+												option Feb
+												-n++;
+									.fl.chosen_v1.no_search
+										- n = 1920
+										select.chosen-select(data-scrollbar="true")
+											while n < 2010
+												option= n++
+												
+							.f_row.mod_3
+								.fl.auth_label: .middle_block: label(for='cur_pass') Current password:
+								.fl.auth_input: input#cur_pass.f_input.f_input_v2(placeholder='Your current password')
+							.f_row.mod_3
+								.fl.auth_label: .middle_block: label(for='new_pass') New password:
+								.fl.auth_input: input#new_pass.f_input.f_input_v2(placeholder='What password so you want')
+							.f_row.mod_3
+								.fl.auth_label: .middle_block Newsletter:
+								.fl.auth_input: label.check_emul.check_emul_v2.dark_mod
+									input.hidden_check.shiftCheck(type='checkbox')
+									span.check_text &nbsp; Send me updates
+									
+						.auth_block
+							.fl: .middle_block
+								button.btn_v3.account_save_btn.fw_600 Save changes
+
+			+page_footer()
+		+dev_pages()

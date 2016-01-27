@@ -1,0 +1,127 @@
+.toddler {
+	
+	.toddler_v1 & {
+		position      : relative;
+		height        : 37 *$m;
+		margin-bottom : 10 *$m;
+	}
+	
+}
+
+.ui-slider-range {
+	
+	.toddler_v1 & {
+		position : absolute;
+		bottom   : 0;
+		//		right    : 0 !important;
+		//		left     : 0 !important;
+		//		width    : 100% !important;
+		top      : -70 * $m;
+		
+		&:after,
+		&:before {
+			content    : '';
+			position   : absolute;
+			top        : 0;
+			width      : 10000 *$m;
+			height     : 70 *$m;
+			background : #000;
+			opacity    : .2;
+		}
+		
+		&:after {
+			left : 100%;
+		}
+		
+		&:before {
+			right : 100%;
+		}
+	}
+}
+
+.ui-slider-handle {
+	
+	.toddler_v1 & {
+		z-index       : 2;
+		cursor        : pointer;
+		position      : absolute;
+		top           : 0;
+		border-radius : 100%;
+		width         : 18 *$m;
+		height        : 18 *$m;
+		margin        : -9 *$m 0 0 -9 *$m;
+		background    : #fff;
+		@extend %box_shadow;
+		
+		&:before {
+			content    : '';
+			position   : absolute;
+			right      : 50%;
+			bottom     : 100%;
+			height     : 61 *$m;
+			width      : 1px;
+			background : #dbb734;
+		}
+		
+		&:after {
+			content    : '';
+			position   : absolute;
+			right      : 50%;
+			top        : 100%;
+			height     : 10 *$m;
+			width      : 1px;
+			background : #dbb734;
+		}
+	}
+}
+
+.toddler_value {
+	.toddler_v1 & {
+		@extend %box_shadow;
+		position      : absolute;
+		left          : 50%;
+		bottom        : 100%;
+		padding       : 3 *$m;
+		margin-bottom : 65 *$m;
+		width         : 40 *$m;
+		margin-left   : -20 *$m;
+		font-size     : 10 *$m;
+		line-height   : 1;
+		background    : #fff;
+		text-align    : center;
+	}
+}
+
+.ui-slider-pip {
+	
+	.toddler_v1 & {
+		cursor      : pointer;
+		position    : absolute;
+		bottom      : 0;
+		width       : 40 *$m;
+		margin-left : -20 *$m;
+		font-size   : 12 *$m;
+		color       : #646464;
+		text-align  : center;
+		background  : #fff;
+		
+		&.ui-slider-pip-last {
+			z-index     : 2;
+			width       : 100 *$m;
+			margin-left : -50 *$m;
+		}
+	}
+}
+
+.ui-slider-label {
+	.toddler_v1 & {
+		cursor : pointer;
+	}
+}
+
+.ui-draggable-dragging {
+	@extend %translate3d;
+	//@include transform_translate(0, -100%);
+	position : absolute;
+	width    : 100%;
+}

@@ -1,0 +1,60 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave charts ', false, false, false, false, false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true)
+
+				.page_title_block
+					h2.page_caption World Charts 
+
+				div.main_content
+					.content_block
+						.charts_block
+							.chart_unit.chartUnit
+								.charts_title
+									.fl: .middle_block.fz_16 Album Charts
+									.fr: .middle_block: a.btn_v7.table_collapse_btn.minus_mod.chartCollapseBtn(href='#')
+
+								.charts_list.chartsList(style='display:none')
+									+loop_while(16)
+										.switch_item: a.switch_link(href='#')
+											.switch_icon: img(src='i/flag_usa.png')
+											span Australia Top 50 Tracks
+
+							.chart_unit.chartUnit
+								.charts_title
+									.fl: .middle_block.fz_16 Single Charts
+									.fr: .middle_block: a.btn_v7.table_collapse_btn.minus_mod.chartCollapseBtn(href='#')
+
+								.charts_list.chartsList(style='display:none')
+									+loop_while(16)
+										.switch_item: a.switch_link(href='#')
+											.switch_icon: img(src='i/flag_usa.png')
+											span Australia Top 50 Tracks
+
+						.charts_albums
+							.charts_title.fz_16 Australia Top 50 Albums
+							div.album_wrapper
+								table.album_table.fav_mod(data-last-checked='-1')
+									+loop_while(9)
+										tr.collapse_row_main(data-collapse=1)
+											td
+												.middle_block
+													a.fav_album_cover(href='#')
+												.middle_block
+													p: a.default_link(href='#') Virgin Voices: A Tribute To Madonna
+													p
+														a.default_link(href='#') Various Artists, Fr33m4n, Altivar,  
+														span.text_gray 2000
+											td.col_5.playlist_btn_green.text_right
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.playlist_btn.icon-download_cloud(href='#')
+
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()

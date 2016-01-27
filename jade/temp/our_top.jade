@@ -1,0 +1,39 @@
+include mixins
+include mixins_3
+doctype html
+html(lang='ru')
+	+dev_head('ivave our_top ', false, false, false, false, false, false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true)
+
+				.page_title_block
+					h2.page_caption Our Top
+					.feed_block
+						ul#top_list.filter_list
+							li.filter_item: a.filter_link(href='#top_tab_1') Today
+							li.filter_item: a.filter_link(href='#top_tab_2') This week
+							li.filter_item: a.filter_link(href='#top_tab_3') This month
+							li.filter_item: a.filter_link(href='#top_tab_4') This year
+							li.filter_item: a.filter_link(href='#top_tab_5') For al time
+
+				div.main_content
+					.content_block: .tabBlock(data-tab-context='#top_list')
+						#top_tab_1
+							+top_list()
+						#top_tab_2
+							+top_list()
+						#top_tab_3
+							+top_list()
+						#top_tab_4
+							+top_list()
+						#top_tab_5
+							+top_list()
+						
+
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()

@@ -1,0 +1,66 @@
+.unreg_banner {
+	position                : relative;
+	padding-bottom          : 50 *$m;
+	height                  : 345 *$m;
+	background              : url(../i/unreg_banner.jpg) no-repeat 50%;
+	-webkit-background-size : cover;
+	-moz-background-size    : cover;
+	-o-background-size      : cover;
+	background-size         : cover;
+	
+	.header_search_block {
+		position : absolute;
+		top      : 345 *$m;
+		right    : 0;
+		left     : 0;
+		@extend %translate3d;
+	}
+}
+
+.fixed_mod.header_search_block {
+	position : fixed;
+	top      : 50 *$m;
+}
+
+.banner_content {
+	position : absolute;
+	top      : 0;
+	bottom   : 0;
+	left     : 0;
+	right    : 0;
+	padding  : 14 *$m 10% 0;
+}
+
+.table {
+	display : table;
+	width   : 100%;
+	height  : 100%;
+}
+
+.abs_holder {
+	position : absolute;
+	top      : 0;
+	bottom   : 0;
+	left     : 0;
+	right    : 0;
+}
+
+.table_cell {
+	display        : table-cell;
+	vertical-align : middle;
+}
+
+.banner_title {
+	font-size : 30 * $m;
+	margin    : 0 0 18 * $m;
+}
+
+.banner_text {
+	line-height   : 1.5;
+	margin-bottom : 25 *$m;
+}
+
+.banner_control_block {
+	text-align    : center;
+	margin-bottom : 18 *$m;
+}

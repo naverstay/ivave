@@ -1,0 +1,49 @@
+mixin support_list()
+	.album_head_wrapper
+		table.album_table
+			tr.text_left
+				th.col_1 #
+				th.col_9 State
+				th.col_10 Subject
+				th.col_6 Comments
+				th.col_11 Date
+				
+	div.album_wrapper.support_mod
+		table.album_table.fav_mod.shiftBlock
+			+loop_while(3)
+				tr
+					td.col_1 514
+					td.col_9 Closed
+					td.col_10: a.default_link(href='support_ticket.html') Testing this awsome ticketing system	
+					td.col_6 2 comments
+					td.col_11 2014-03-26
+					
+mixin top_list()
+	ul.news_list_switcher
+		li.news_list_sw_item
+			.chart_switch_block.hoverHolder
+				.switch_btn.hoverControl
+					span Select genre to filter
+				.switch_list_holder.hoverBlock: .scrollBar(data-max_screen_height = '30%', data-scroller-class='scrollbar-inner scroller_holder h_380')
+					ul.switch_list
+						li.switch_item: a.switch_link(href='#') Select genre to filter
+						li.switch_item: a.switch_link(href='#') Select genre to filter 1
+						li.switch_item: a.switch_link(href='#') Select genre to filter 2
+						li.switch_item: a.switch_link(href='#') Select genre to filter 3
+						li.switch_item: a.switch_link(href='#') Select genre to filter 4
+						li.switch_item: a.switch_link(href='#') Select genre to filter 5
+						li.switch_item: a.switch_link(href='#') Select genre to filter 6
+						li.switch_item: a.switch_link(href='#') Select genre to filter 7
+						
+	.content_box
+		ul.bestseller_list
+			+loop_while(10)
+				li.bestseller_item
+					a.related_album_cover(href='#')
+						img(src='i/aside_album_1.jpg')
+						.top_star.icon-star: span.fz_18.fw_600  1
+						.related_price: span.fz_17.fw_600 $ 1.20
+					p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+					p
+						a.default_link.fw_600(href='#') Marianas Trench 
+						span.text_gray  2013

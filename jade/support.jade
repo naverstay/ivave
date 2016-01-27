@@ -1,0 +1,55 @@
+include mixins
+include mixins_3
+doctype html
+html(lang='ru')
+	+dev_head('ivave support', false, false, false, false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, true)
+				.page_title_block
+					h2.page_caption Support
+					.feed_block
+						ul#support_list.filter_list
+							li.filter_item: a.filter_link(href='#support_tab_1') Opened
+							li.filter_item: a.filter_link(href='#support_tab_2') Solved
+
+				div.main_content
+
+					.content_block
+						a.fav_toggle_btn.management_mod.newTicketBtn(href='#', class='fav_toggle_add')
+
+						.newTicket(style='display:none')
+							form(action='#')
+								.account_form
+									.f_row.mod_3
+										.fl.auth_label: .middle_block Subject: 
+										.fl.input_20.chosen_v1.no_search.fw_600
+											- var n = 1
+											select.chosen-select(data-scrollbar="true")
+												while n < 25
+													option Signup problems #{n++}
+									.f_row.mod_3
+										.fl.auth_label: .middle_block: label(for='new_pass') Title:
+										.fl.input_30: input#new_pass.f_input.f_input_v2(placeholder='Write something')
+									.f_row.mod_3
+										.fl.auth_label: .middle_block: label(for='cur_pass') Message:
+										.fl.input_50: input#cur_pass.f_input.f_input_v2(placeholder='Write something more')
+										
+								.auth_block
+									.fl: .middle_block
+										button.btn_v3.account_save_btn.fw_600 Send ticket
+
+
+						.tabBlock.oldTickets(data-tab-context='#support_list')
+							#support_tab_1
+								+support_list()
+							#support_tab_2
+								+support_list()
+
+			+page_footer()
+		+dev_btns_unreg()
+		+unreg_popups()
+		+popups()
+		+dev_pages()

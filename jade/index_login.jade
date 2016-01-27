@@ -1,0 +1,84 @@
+include mixins
+include mixins_2
+doctype html
+html(lang='ru')
+	+dev_head('ivave главная для зарегистрированных', false, true, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, true)
+				.page_title_block
+					h2.page_caption Feed
+					.feed_block
+						ul#feed_list.filter_list
+							li.filter_item: a.filter_link(href='#feed_tab_1') My news 
+							li.filter_item: a.filter_link(href='#feed_tab_2') All news
+
+				div.main_content
+					.aside_right
+						.aside_block
+							.aside_info_box
+								.aside_block_caption
+									.fl: .fz_17 Today’s top:
+									.fr: a.default_link(href='#') See all
+							ul.aside_album_list.todays_top_mod
+								+loop_while(5)
+									li.aside_album_item: a.aside_album_link(href='#')
+										.aside_album_cover_small
+										.middle_block
+											p: span.default_link.fw_600(href='#') The best 00’s Hits
+											p 2014
+									li.aside_album_item: a.aside_album_link(href='#')
+										.aside_album_cover_small
+										.middle_block
+											p: span.default_link.fw_600(href='#') Frozen (In-Phase Bootlererereree Frozen (In-Phase Bootlererereree
+											p 2013
+
+						.aside_block
+							.aside_info_box
+								.aside_caption_holder
+									.fr: a.default_link(href='#') See all
+									.aside_caption.fz_17 Best sellers of 26 September
+							+loop_while(3)
+								a.aside_album_cover(href='#')
+									img(src='i/best_cover.jpg')
+									.related_price: span.fz_17.fw_600 $ 1.20
+								.aside_info_box
+									a.default_link(href='#') Frozen (In-Phase Bootled out) Marianas Trench, 
+										span.text_gray 2013
+											
+											
+						.aside_block.aside_info_box.tags_mod
+							.fz_17.fw_600 Tags
+							.tags_block
+								a.default_link(href='#') pop 
+								a.default_link(href='#') multiple 
+								a.default_link(href='#') ipi 
+								a.default_link(href='#') chanteur 
+								a.default_link(href='#') americain 
+								a.default_link(href='#') pop 
+								a.default_link(href='#') and 
+								a.default_link(href='#') chart 
+								a.default_link(href='#') tell 
+								a.default_link(href='#') me 
+								a.default_link(href='#') greatest 
+								a.default_link(href='#') hits 
+								a.default_link(href='#') female 
+								a.default_link(href='#') vocalists 
+								a.default_link(href='#') dance 
+								a.default_link(href='#') 80s 
+								a.default_link(href='#') electronic 
+								a.default_link(href='#') Madonna 
+
+					.content_block: .tabBlock(data-tab-context='#feed_list')
+						#feed_tab_1
+							+news_list()
+						#feed_tab_2
+							+news_list()
+
+			+page_footer()
+		+dev_btns_unreg()
+		+unreg_popups()
+		+popups()
+		+dev_pages()

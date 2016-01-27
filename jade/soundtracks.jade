@@ -1,0 +1,241 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave soundtracks ', false, false, false, false, false, false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, false, true)
+
+				.page_title_block
+					.fl: .middle_block: h2.page_caption Soundtracks
+					.fr.title_filter
+						.middle_block
+							.soundtrack_filter
+								span.middle_block Popularity
+								span.middle_block.chosen_v1.no_search.fw_600.green_mod
+									select.chosen-select(data-scrollbar="true", data-placeholder='Choose')
+										option 
+										option Popularity 
+										option Popularity 1
+										option Popularity 2
+						.middle_block
+							.soundtrack_filter
+								span.middle_block Direction
+								span.middle_block.chosen_v1.no_search.fw_600.green_mod
+									select.chosen-select(data-scrollbar="true")
+										option Descending
+										option Ascending
+
+				div.main_content
+					.content_block
+						.charts_block
+							.charts_title
+								span.middle_block.fz_19 Filters
+							
+							.genre_filter_block.filterBlock.open_row
+								.filter_block_caption
+									span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+									span.middle_block.fz_16.fw_b Realize date
+								.filterContainer
+									.f_row.mod_4
+										.fl.auth_label: .middle_block From
+										.fr.auth_input
+											.fl.chosen_v1.no_search
+												- var n = 1
+												select.chosen-select(data-scrollbar="true", data-placeholder="DD")
+													option
+													while n < 32
+														option= n++
+											.fl.chosen_v1.no_search
+												- n = 1
+												select.chosen-select(data-scrollbar="true", data-placeholder="MM")
+													option
+													while n < 12
+														option Feb
+														-n++;
+											.fl.chosen_v1.no_search
+												- n = 1920
+												select.chosen-select(data-scrollbar="true", data-placeholder="YY")
+													option
+													while n < 2010
+														option= n++
+									.f_row.mod_4
+										.fl.auth_label: .middle_block To
+										.fr.auth_input
+											.fl.chosen_v1.no_search
+												- var n = 1
+												select.chosen-select(data-scrollbar="true", data-placeholder="DD")
+													option
+													while n < 32
+														option= n++
+											.fl.chosen_v1.no_search
+												- n = 1
+												select.chosen-select(data-scrollbar="true", data-placeholder="MM")
+													option
+													while n < 12
+														option Feb
+														-n++;
+											.fl.chosen_v1.no_search
+												- n = 1920
+												select.chosen-select(data-scrollbar="true", data-placeholder="YY")
+													option
+													while n < 2010
+														option= n++
+							
+							div.genre_filter_block.filterBlock.open_row
+								.filter_block_caption
+									span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+									span.middle_block.fz_16.fw_b Genres
+								.filter_container.filterContainer.filter_2_mod
+									ul.genre_filter_list
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Avant-Garde
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Blues
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Classical Music
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Country
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Easy Listening
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Electronic
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Folk
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; International
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Jazz
+									ul.genre_filter_list
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Latin
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; New Age
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Pop/Rock
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; R&B
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Rap
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Reggae
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Stage & Screen
+										li.genre_filter_item
+											label.check_emul.check_emul_v2.green_mod
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text &nbsp; Vocal
+							
+						.charts_albums
+							.charts_title: .middle_block.fz_19 Soundtracks 
+								
+							.content_box
+								ul.related_list
+									+loop_while(4)
+										li.related_item
+											a.related_album_cover(href='#')
+												img(src='i/aside_album_1.jpg')
+												.related_price: span.fz_17.fw_600 $ 1.20
+											p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+											p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+											p.text_gray 2007
+										li.related_item
+											a.related_album_cover(href='#')
+												img(src='i/aside_album_1.jpg')
+												.related_price: span.fz_17.fw_600 $ 1.20
+											p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+											p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+											p.text_gray 2007
+										li.related_item
+											a.related_album_cover(href='#')
+												img(src='i/aside_album_1.jpg')
+												.related_price: span.fz_17.fw_600 $ 1.20
+											p: a.default_link(href='#') Teenage Dream - The Complete Confection
+											p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+											p.text_gray 2007
+								
+								
+							//.album_wrapper
+								table.album_table.shiftBlock(data-last-checked='-1')
+									+loop_while(16)
+										tr.shiftUnit
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4: .middle_block Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6 5:46
+											td.col_6 $0.10
+											td.col_11.playlist_btn_green
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.playlist_btn.icon-download_cloud(href='#')
+										tr.shiftUnit
+											td.col_2
+												span.check_emul.check_emul_v2
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text
+											td.col_3.player_btn_blue
+												a.player_btn.icon-player_play.player_btn_shadow(href='#')
+											td.col_4: .middle_block Virgin Mary (Intro)
+											td.col_5 320 kbit
+											td.col_6 5:46
+											td.col_6 $0.10
+											td.col_11.playlist_btn_green
+												a.icon-heart.playlist_btn.favBtn(href='#')
+												a.playlist_btn.icon-download_cloud(href='#')
+									tr.shiftUnit
+										td.col_2
+											span.check_emul.check_emul_v2
+												input.hidden_check.shiftCheck(type='checkbox')
+												span.check_text
+										td.col_3.player_btn_blue
+											a.player_btn.icon-player_play.player_btn_shadow(href='#')
+										td.col_4: .middle_block.one_line_mod: p Virgin Mary (Intro)
+										td.col_5 320 kbit
+										td.col_6 5:46
+										td.col_6 $0.10
+										td.col_11.playlist_btn_green
+											a.icon-heart.playlist_btn.active.favBtn(href='#')
+											a.playlist_btn.icon-download_cloud(href='#')
+
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()

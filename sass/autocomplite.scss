@@ -1,0 +1,44 @@
+
+.ui-helper-hidden-accessible {
+	.autocomplete_v1 & {
+		display    : none;
+		position   : absolute;
+		top        : -55 * $m;
+		right      : -50 * $m;
+		left       : -50 * $m;
+		background : #fff;
+		padding    : 5 * $m;
+		color      : red;
+		font-size  : 30 * $m;
+	}
+}
+
+.ui-autocomplete {
+	
+	.autocomplete_v1 & {
+		position   : relative !important;
+		top        : auto !important;
+		left       : auto !important;
+		right      : auto !important;
+		background : $gl_blue;
+		text-align : left;
+		padding    : 9 * $m 0;
+		
+		li.ui-menu-item {
+			cursor      : pointer;
+			color       : #fff;
+			line-height : 34.5 * $m;
+			padding     : 0 5 * $m 0 75 * $m;
+			@include transition_all(background-color .3s);
+			
+			&.ui-state-focus,
+			&:hover {
+				background : $gl_blue_h;
+			}
+			
+			&:active {
+				background : $gl_blue_a;
+			}
+		}
+	}
+}

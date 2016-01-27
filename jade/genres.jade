@@ -1,0 +1,621 @@
+include mixins
+doctype html
+html(lang='ru')
+	+dev_head('ivave genres ', false, false, false, false, false, false, false, true)
+
+	body
+		.wrapper
+			.base
+				+page_header(true, false, false, true)
+
+				.page_title_block
+					h2.page_caption Genres
+					.feed_block
+						ul#genres_list.filter_list
+							li.filter_item: a.filter_link(href='#genre_tab_1') Artists
+							li.filter_item: a.filter_link(href='#genre_tab_2') Albums
+
+				div.main_content
+					.content_block: .tabBlock(data-tab-context='#genres_list')
+						#genre_tab_1
+							
+							.alphabet_filter_holder: table.alphabet_table
+								tr
+									td.active: a.alphabet_link(href='#') A 
+									td: a.alphabet_link(href='#') B
+									td: a.alphabet_link(href='#') C
+									td: a.alphabet_link(href='#') D
+									td: a.alphabet_link(href='#') E
+									td: a.alphabet_link(href='#') F
+									td: a.alphabet_link(href='#') G
+									td: a.alphabet_link(href='#') H
+									td: a.alphabet_link(href='#') I
+									td: a.alphabet_link(href='#') J
+									td: a.alphabet_link(href='#') K
+									td: a.alphabet_link(href='#') L
+									td: a.alphabet_link(href='#') M
+									td: a.alphabet_link(href='#') N
+									td: a.alphabet_link(href='#') O
+									td: a.alphabet_link(href='#') P
+									td: a.alphabet_link(href='#') Q
+									td: a.alphabet_link(href='#') R
+									td: a.alphabet_link(href='#') S
+									td: a.alphabet_link(href='#') T
+									td: a.alphabet_link(href='#') U
+									td: a.alphabet_link(href='#') V
+									td: a.alphabet_link(href='#') W
+									td: a.alphabet_link(href='#') X
+									td: a.alphabet_link(href='#') Y
+									td: a.alphabet_link(href='#') Z
+									td: a.alphabet_link(href='#') #
+									td: a.alphabet_link(href='#') ALL
+							
+							.charts_block
+								.charts_title
+									span.middle_block.fz_19 Filters
+								
+								.genre_filter_block.filterBlock.open_row
+									.filter_counter 100500 songs
+									.filter_block_caption
+										span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+										span.middle_block.fz_16.fw_b Activity decades
+									.filter_container.filterContainer.filter_3_mod
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 40s
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 50s
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 60s
+											
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 70s
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 80s
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 90s
+													
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; 2000s
+
+								.genre_filter_block.filterBlock.open_row
+									.filter_block_caption
+										span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+										span.middle_block.fz_16.fw_b Genres
+									.filter_container.filterContainer.filter_2_mod
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Avant-Garde
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Blues
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Classical Music
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Country
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Easy Listening
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Electronic
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Folk
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; International
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Jazz
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Latin
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; New Age
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Pop/Rock
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; R&B
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Rap
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Reggae
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Stage & Screen
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Vocal
+
+								.genre_filter_block.filterBlock.open_row
+									.filter_block_caption
+										span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+										span.middle_block.fz_16.fw_b Countries
+									.filter_container.filterContainer.filter_2_mod
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; UK
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; USA
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Germany
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; France
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Italy
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Canada
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Japan
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Sweden
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Netherlands
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Finland
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Australia
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Spain
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Poland
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Norway
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Russia
+											
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Belgium
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Jamaica
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Denmark
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Brazil
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Austria
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Estonia
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Greece
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Ireland
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; New Zealand
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; England
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Switzerland
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Mexico
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Argentina
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Israel
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Turkey
+
+								.genre_filter_block.filterBlock.open_row
+									.filter_block_caption
+										span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+										span.middle_block.fz_16.fw_b Types
+									.filter_container.filterContainer.filter_2_mod
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Album
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Single
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Compilation
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Concert
+										ul.genre_filter_list
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Ost
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Bootleg
+											li.genre_filter_item
+												label.check_emul.check_emul_v2.green_mod
+													input.hidden_check.shiftCheck(type='checkbox')
+													span.check_text &nbsp; Tribute
+													
+								.genre_filter_block
+									a.btn_v1.load_more_btn Apply
+
+							.charts_albums
+								.charts_title: .middle_block.fz_19 Artists
+								.content_box
+									ul.related_list
+										+loop_while(5)
+											li.related_item
+												a.related_album_cover(href='#')
+													img(src='i/aside_album_1.jpg')
+													.related_price: span.fz_17.fw_600 $ 1.20
+												p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+												p.text_gray 169 albums
+											li.related_item
+												a.related_album_cover(href='#')
+													img(src='i/aside_album_1.jpg')
+													.related_price: span.fz_17.fw_600 $ 1.20
+												p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+												p.text_gray 169 albums
+											li.related_item
+												a.related_album_cover(href='#')
+													img(src='i/aside_album_1.jpg')
+													.related_price: span.fz_17.fw_600 $ 1.20
+												p: a.default_link(href='#') Teenage Dream - The Complete Confection
+												p.text_gray 169 albums
+
+						#genre_tab_2
+							.alphabet_filter_holder: table.alphabet_table
+								tr
+									td.active: a.alphabet_link(href='#') A 
+									td: a.alphabet_link(href='#') B
+									td: a.alphabet_link(href='#') C
+									td: a.alphabet_link(href='#') D
+									td: a.alphabet_link(href='#') E
+									td: a.alphabet_link(href='#') F
+									td: a.alphabet_link(href='#') G
+									td: a.alphabet_link(href='#') H
+									td: a.alphabet_link(href='#') I
+									td: a.alphabet_link(href='#') J
+									td: a.alphabet_link(href='#') K
+									td: a.alphabet_link(href='#') L
+									td: a.alphabet_link(href='#') M
+									td: a.alphabet_link(href='#') N
+									td: a.alphabet_link(href='#') O
+									td: a.alphabet_link(href='#') P
+									td: a.alphabet_link(href='#') Q
+									td: a.alphabet_link(href='#') R
+									td: a.alphabet_link(href='#') S
+									td: a.alphabet_link(href='#') T
+									td: a.alphabet_link(href='#') U
+									td: a.alphabet_link(href='#') V
+									td: a.alphabet_link(href='#') W
+									td: a.alphabet_link(href='#') X
+									td: a.alphabet_link(href='#') Y
+									td: a.alphabet_link(href='#') Z
+									td: a.alphabet_link(href='#') #
+									td: a.alphabet_link(href='#') ALL
+									
+							.charts_block
+								.chart_unit.chartUnit
+									.charts_title
+										span.middle_block.fz_19 Filters
+											
+									.genre_filter_block.filterBlock.open_row
+										.filter_block_caption
+											span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+											span.middle_block.fz_16.fw_b Realize date
+										.filterContainer
+											.f_row.mod_4
+												.fl.auth_label: .middle_block From
+												.fr.auth_input
+													.fl.chosen_v1.no_search
+														- var n = 1
+														select.chosen-select(data-scrollbar="true", data-placeholder="DD")
+															option 
+															while n < 32
+																option= n++
+													.fl.chosen_v1.no_search
+														- n = 1
+														select.chosen-select(data-scrollbar="true", data-placeholder="MM")
+															option 
+															while n < 12
+																option Feb
+																-n++;
+													.fl.chosen_v1.no_search
+														- n = 1920
+														select.chosen-select(data-scrollbar="true", data-placeholder="YY")
+															option 
+															while n < 2010
+																option= n++
+											.f_row.mod_4
+												.fl.auth_label: .middle_block To
+												.fr.auth_input
+													.fl.chosen_v1.no_search
+														- var n = 1
+														select.chosen-select(data-scrollbar="true", data-placeholder="DD")
+															option 
+															while n < 32
+																option= n++
+													.fl.chosen_v1.no_search
+														- n = 1
+														select.chosen-select(data-scrollbar="true", data-placeholder="MM")
+															option 
+															while n < 12
+																option Feb
+																-n++;
+													.fl.chosen_v1.no_search
+														- n = 1920
+														select.chosen-select(data-scrollbar="true", data-placeholder="YY")
+															option 
+															while n < 2010
+																option= n++
+
+									.genre_filter_block.filterBlock.open_row
+										.filter_block_caption
+											span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+											span.middle_block.fz_16.fw_b Genres
+										.filter_container.filterContainer.filter_2_mod
+											ul.genre_filter_list
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Avant-Garde
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Blues
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Classical Music
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Country
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Easy Listening
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Electronic
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Folk
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; International
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Jazz
+											ul.genre_filter_list
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Latin
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; New Age
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Pop/Rock
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; R&B
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Rap
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Reggae
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Stage & Screen
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Vocal
+
+									.genre_filter_block.filterBlock.open_row
+										.filter_block_caption
+											span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+											span.middle_block.fz_16.fw_b Types
+										.filter_container.filterContainer.filter_2_mod
+											ul.genre_filter_list
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Album
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Single
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Compilation
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Concert
+											ul.genre_filter_list
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Ost
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Bootleg
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Tribute
+
+									.genre_filter_block.filterBlock.open_row
+										.filter_block_caption
+											span.middle_block: a.btn_v7.table_collapse_btn.minus_mod.filterCollapseBtn(href='#')
+											span.middle_block.fz_16.fw_b Bitrate
+										.filter_container.filterContainer
+											ul.genre_filter_list
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Low (32-127 kbps)
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Medium (128-191 kbps)
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; High (192-255 kbit/s)
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; Highest (256-320 kbps)
+												li.genre_filter_item
+													label.check_emul.check_emul_v2.green_mod
+														input.hidden_check.shiftCheck(type='checkbox')
+														span.check_text &nbsp; FLAC
+														
+							.charts_albums
+								.charts_title: .middle_block.fz_19 Albums
+								.content_box
+									ul.related_list
+										+loop_while(5)
+											li.related_item
+												a.related_album_cover(href='#')
+													img(src='i/aside_album_1.jpg')
+													.related_price: span.fz_17.fw_600 $ 1.20
+												p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+												p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+												p.text_gray 2007
+											li.related_item
+												a.related_album_cover(href='#')
+													img(src='i/aside_album_1.jpg')
+													.related_price: span.fz_17.fw_600 $ 1.20
+												p: a.default_link(href='#') Frozen (In-Phase Bootled out)
+												p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+												p.text_gray 2007
+											li.related_item
+												a.related_album_cover(href='#')
+													img(src='i/aside_album_1.jpg')
+													.related_price: span.fz_17.fw_600 $ 1.20
+												p: a.default_link(href='#') Teenage Dream - The Complete Confection
+												p: a.default_link.fw_600(href='#') Marianas Trench, 2013
+												p.text_gray 2007
+
+			+page_footer()
+		+popups()
+		+dev_btns()
+		+dev_pages()
